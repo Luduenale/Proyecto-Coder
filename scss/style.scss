@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  .Header__Intro {
+    position: sticky;
+    top: 0;
+    background-color: #191919;
+    opacity: 95%;
+    width: 100%;
+    height: 85px;
+  }
+  
+  .Header__Logo img {
+    position: absolute;
+    left: 10px;
+    height: 80px;
+  }
+  
+  .Header__NavList {
+    position: fixed;
+    right: 10px;
+    top: 60px;
+  }
+  
+  .Header__NavList ul li {
+    display: inline;
+    margin-left: 20px;
+  }
+  
+  .Header__NavList ul li a {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    color: #f3eded;
+  }
+  
+  .Section__Img {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .Section__Img div img {
+    width: 700px;
+  }
+  
+  .Article__Title {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 1%;
+    margin-bottom: 30px;
+    color: cadetblue;
+    font-style: italic;
+  }
+  
+  .Article__Parrafo {
+    line-height: 1.5;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .Video__Corp {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .Footer__Content {
+    background-color: #525252;
+    width: 100%;
+  }
+  
+  .Footer__Texto {
+    color: black;
+    font-family: monospace;
+    text-align: center;
+    position: relative;
+    top: 50px;
+  }
+  
+  .Footer__SocialIcon {
+    margin-left: 97%;
+  }
+  
+  .Footer__SocialIcon div a img {
+    height: 30px;
+    width: 35px;
+  }
+  
+  /* CSS en Page Quienes-Somos */
+  
+  .Background__ImgQS img {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .QS__Titulo {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 1%;
+    margin-bottom: 30px;
+    color: cadetblue;
+    font-style: italic;
+  }
+  
+  .QS__Parrafo {
+    line-height: 1.5;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    text-align: justify;
+  }
+  
+  /* CSS en Page Servicios */
+  
+  .titulo-inicio {
+    display: flex;
+    font-size: 30px;
+    margin-top: 30px;
+    color: cadetblue;
+    font-style: italic;
+    justify-content: center;
+  }
+  
+  /* CSS en Page Partners */
+  
+  .Partners__Inicio h1 {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 1%;
+    margin-bottom: 30px;
+    color: cadetblue;
+    font-style: italic;
+  }
+  
+  .Partners__Inicio p {
+    line-height: 1.5;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    text-align: justify;
+  }
+  
+  .partners-logo img {
+    width: 15%;
+  }
+  
+  /* CSS en page Contacto (aplicacion grid) */
+  
+  .grid-contacto {
+    display: flex;
+    justify-content: center;
+    background-color: #e1e7e6;
+  }
+  .grid-contacto {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: 150%;
+    padding-top: 2%;
+    padding-bottom: 10%;
+  }
+  
+  /* aplicando bordes y centrando */
+  .grid {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10%;
+  }
+  
+  .grid-2,
+  .grid-3 {
+    border-left: 5px solid rgb(113, 115, 116);
+  }
+  /* Fuente para page (ya linkeada) */
+  .tittle,
+  .text {
+    font-family: "Slabo 27px", serif;
+  }
+  .text {
+    font-size: 25px;
+  }
+  
+  /* aplicando CSS en mapa  */
+  .mapa {
+    display: flex;
+    justify-content: center;
+    background-color: #e1e7e6;
+    padding-top: 2%;
+  }
+  
+  .content-sec {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #e1e7e6;
+  }
+  
+  /* aplicando CSS en formulario */
+  
+  .form-title {
+    font-size: 39px;
+    text-align: letf;
+    padding-bottom: 20px;
+    color: #1d1c1d;
+  }
+  .form-parrafo {
+    font-size: 16px;
+    padding-bottom: 30px;
+    color: #0e0e0e;
+  }
+  .form-text {
+    font-size: 20px;
+    color: #0e0e0e;
+  }
+  .content_form {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #e1e7e6;
+    padding-left: 30px;
+  }
+  /* CSS en texto de relleno */
+  input {
+    background-color: #ffffff;
+    width: 408px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #222122;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+  /* CSS en mensaje */
+  .texto-mensaje {
+    background-color: #ffffff;
+    width: 405px;
+    height: 150px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #222122;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+  }
+  /* CSS en etiquetas  */
+  .etiqueta-form {
+    display: block;
+    float: center;
+  }
+  /* CSS en boton para enviar */
+  .boton-enviar {
+    height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: #272727;
+    border-color: #222122;
+    border-style: solid;
+    border-radius: 10px;
+    width: 420px;
+    cursor: pointer;
+  }
+  
+  .boton-enviar p {
+    color: #fff;
+  }
+  
+  /* CSS en page servicios GRID */
+  
+  .grid-servicios {
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(3, 30%);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  
+  .grid-uno {
+    grid-area: 1 / 1 / 2 / 4;
+    align-items: center;
+  }
+  .grid-dos {
+    grid-area: 2 / 1 / 3 / 4;
+  }
+  .grid-tres {
+    grid-area: 3 / 1 / 4 / 4;
+  }
+  
+  .grid-ser {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1%;
+    padding-top: 1%;
+  }
+  
+  .grid-ser img {
+    width: 20%;
+    height: 100%;
+  }
