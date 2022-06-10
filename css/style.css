@@ -4,43 +4,38 @@
   box-sizing: border-box;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
 
-.Header__Intro {
+header {
   position: sticky;
   top: 0;
   background-color: #191919;
   opacity: 95%;
   width: 100%;
   height: 85px; }
+  header img {
+    position: absolute;
+    left: 10px;
+    height: 80px; }
+  header nav {
+    position: fixed;
+    right: 10px;
+    top: 60px; }
+    header nav li {
+      display: inline;
+      margin-left: 20px; }
+      header nav li a {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+        list-style: none;
+        color: #f3eded; }
 
-.Header__Logo img {
-  position: absolute;
-  left: 10px;
-  height: 80px; }
-
-.Header__NavList {
-  position: fixed;
-  right: 10px;
-  top: 60px; }
-
-.Header__NavList ul li {
-  display: inline;
-  margin-left: 20px; }
-
-.Header__NavList ul li a {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-decoration: none;
-  list-style: none;
-  color: #f3eded; }
-
-.Section__Img {
+section {
   margin-top: 10px;
   display: flex;
   justify-content: space-evenly; }
+  section img {
+    width: 700px; }
 
-.Section__Img div img {
-  width: 700px; }
-
-.Article__Title {
+div h1 {
   font-size: 30px;
   margin-top: 30px;
   margin-left: 1%;
@@ -48,7 +43,7 @@
   color: cadetblue;
   font-style: italic; }
 
-.Article__Parrafo {
+div p {
   line-height: 1.5;
   font-size: 20px;
   margin-left: 20px;
@@ -59,23 +54,21 @@
   display: flex;
   justify-content: space-evenly; }
 
-.Footer__Content {
+footer {
   background-color: #525252;
   width: 100%; }
-
-.Footer__Texto {
-  color: black;
-  font-family: monospace;
-  text-align: center;
-  position: relative;
-  top: 50px; }
+  footer p {
+    color: black;
+    font-family: monospace;
+    text-align: center;
+    position: relative;
+    top: 50px; }
 
 .Footer__SocialIcon {
   margin-left: 97%; }
-
-.Footer__SocialIcon div a img {
-  height: 30px;
-  width: 35px; }
+  .Footer__SocialIcon img {
+    height: 30px;
+    width: 35px; }
 
 /* CSS en Page Quienes-Somos */
 .Background__ImgQS img {
