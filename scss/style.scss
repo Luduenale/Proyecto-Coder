@@ -1,3 +1,9 @@
+@import "components/header";
+@import "components/footer";
+@import "base/listas";
+@import "base/extends";
+@import "base/mixins";
+
 * {
   margin: 0;
   padding: 0;
@@ -5,34 +11,6 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  background-color: #191919;
-  opacity: 95%;
-  width: 100%;
-  height: 85px;
-  img {
-    position: absolute;
-    left: 10px;
-    height: 80px;
-  }
-  nav {
-    position: fixed;
-    right: 10px;
-    top: 60px;
-    li {
-      display: inline;
-      margin-left: 20px;
-      a {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        text-decoration: none;
-        list-style: none;
-        color: #f3eded;
-      }
-    }
-  }
-}
 section {
   margin-top: 10px;
   display: flex;
@@ -44,16 +22,12 @@ section {
 
 div {
   h1 {
-    font-size: 30px;
-    margin-top: 30px;
-    margin-left: 1%;
-    margin-bottom: 30px;
-    color: cadetblue;
-    font-style: italic;
+    @include varios(30px, 1%, 30px);
+    color: nth($colores, 3);
+    @extend %titulo;
   }
   p {
-    line-height: 1.5;
-    font-size: 20px;
+    @extend %parrafo;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -62,25 +36,6 @@ div {
   margin-bottom: 100px;
   display: flex;
   justify-content: space-evenly;
-}
-footer {
-  background-color: #525252;
-  width: 100%;
-  p {
-    color: black;
-    font-family: monospace;
-    text-align: center;
-    position: relative;
-    top: 50px;
-  }
-}
-
-.Footer__SocialIcon {
-  margin-left: 97%;
-  img {
-    height: 30px;
-    width: 35px;
-  }
 }
 
 /* CSS en Page Quienes-Somos */
@@ -91,17 +46,13 @@ footer {
 }
 
 .QS__Titulo {
-  font-size: 30px;
-  margin-top: 30px;
-  margin-left: 1%;
-  margin-bottom: 30px;
-  color: cadetblue;
-  font-style: italic;
+  @include varios(30px, 1%, 30px);
+  color: nth($colores, 3);
+  @extend %titulo;
 }
 
 .QS__Parrafo {
-  line-height: 1.5;
-  font-size: 20px;
+  @extend %parrafo;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 50px;
@@ -112,43 +63,85 @@ footer {
 
 .titulo-inicio {
   display: flex;
-  font-size: 30px;
   margin-top: 30px;
-  color: cadetblue;
-  font-style: italic;
+  color: nth($colores, 3);
   justify-content: center;
+  @extend %titulo;
+}
+
+.grid-servicios {
+  display: grid;
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(3, 30%);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.grid-uno {
+  grid-area: 1 / 1 / 2 / 4;
+  align-items: center;
+}
+.grid-dos {
+  grid-area: 2 / 1 / 3 / 4;
+}
+.grid-tres {
+  grid-area: 3 / 1 / 4 / 4;
+}
+
+.grid-ser {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+
+.grid-ser img {
+  width: 20%;
+  height: 100%;
 }
 
 /* CSS en Page Partners */
 
-.Partners__Inicio h1 {
-  font-size: 30px;
-  margin-top: 30px;
-  margin-left: 1%;
-  margin-bottom: 30px;
-  color: cadetblue;
-  font-style: italic;
+.partners-inicio {
+  h1 {
+    @extend %titulo;
+    display: flex;
+    margin-top: 30px;
+    color: nth($colores, 3);
+    justify-content: center;
+  }
+  p {
+    @extend %parrafo;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    text-align: justify;
+  }
 }
 
-.Partners__Inicio p {
-  line-height: 1.5;
-  font-size: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 50px;
-  text-align: justify;
-}
-
-.partners-logo img {
-  width: 15%;
+.partners-logo {
+  img {
+    width: 15%;
+  }
 }
 
 /* CSS en page Contacto (aplicacion grid) */
 
+.titulo-contacto {
+  @extend %titulo;
+  color: nth($colores, 3);
+  display: flex;
+  margin-top: 30px;
+  color: nth($colores, 3);
+  justify-content: center;
+}
+
 .grid-contacto {
   display: flex;
   justify-content: center;
-  background-color: #e1e7e6;
+  background-color: nth($colores, 4);
 }
 .grid-contacto {
   display: grid;
@@ -182,14 +175,14 @@ footer {
 .mapa {
   display: flex;
   justify-content: center;
-  background-color: #e1e7e6;
+  background-color: nth($colores, 4);
   padding-top: 2%;
 }
 
 .content-sec {
   display: flex;
   justify-content: space-evenly;
-  background-color: #e1e7e6;
+  background-color: nth($colores, 4);
 }
 
 /* aplicando CSS en formulario */
@@ -198,46 +191,46 @@ footer {
   font-size: 39px;
   text-align: letf;
   padding-bottom: 20px;
-  color: #1d1c1d;
+  color: nth($colores, 5);
 }
 .form-parrafo {
   font-size: 16px;
   padding-bottom: 30px;
-  color: #0e0e0e;
+  color: nth($colores, 6);
 }
 .form-text {
   font-size: 20px;
-  color: #0e0e0e;
+  color: nth($colores, 6);
 }
 .content_form {
   height: auto;
   padding-top: 30px;
   padding-bottom: 20px;
-  background-color: #e1e7e6;
+  background-color: nth($colores, 4);
   padding-left: 30px;
 }
 /* CSS en texto de relleno */
 input {
-  background-color: #ffffff;
+  background-color: nth($colores, 7);
   width: 408px;
   height: 40px;
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-  border-color: #222122;
+  border-color: nth($colores, 8);
   margin-top: 10px;
   padding-left: 10px;
   margin-bottom: 20px;
 }
 /* CSS en mensaje */
 .texto-mensaje {
-  background-color: #ffffff;
+  background-color: nth($colores, 7);
   width: 405px;
   height: 150px;
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-  border-color: #222122;
+  border-color: nth($colores, 8);
   margin-top: 10px;
   padding-left: 10px;
   margin-bottom: 20px;
@@ -256,8 +249,8 @@ input {
   margin-bottom: 20px;
   margin-top: 10px;
   text-transform: uppercase;
-  background-color: #272727;
-  border-color: #222122;
+  background-color: nth($colores, 9);
+  border-color: nth($colores, 8);
   border-style: solid;
   border-radius: 10px;
   width: 420px;
@@ -265,40 +258,5 @@ input {
 }
 
 .boton-enviar p {
-  color: #fff;
-}
-
-/* CSS en page servicios GRID */
-
-.grid-servicios {
-  display: grid;
-  display: flex;
-  flex-direction: column;
-  grid-template-columns: repeat(3, 30%);
-  grid-template-rows: repeat(3, 30%);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-
-.grid-uno {
-  grid-area: 1 / 1 / 2 / 4;
-  align-items: center;
-}
-.grid-dos {
-  grid-area: 2 / 1 / 3 / 4;
-}
-.grid-tres {
-  grid-area: 3 / 1 / 4 / 4;
-}
-
-.grid-ser {
-  display: flex;
-  align-items: center;
-  padding-bottom: 1%;
-  padding-top: 1%;
-}
-
-.grid-ser img {
-  width: 20%;
-  height: 100%;
+  color: nth($colores, 4);
 }
