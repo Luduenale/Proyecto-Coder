@@ -111,7 +111,7 @@ div {
     margin-top: 30px;
     color: nth($colores, 3);
     justify-content: center;
-      }
+  }
   p {
     @extend %parrafo;
     margin-left: 20px;
@@ -130,15 +130,13 @@ div {
 /* CSS en page Contacto (aplicacion grid) */
 
 .titulo-contacto {
-  
-    @extend %titulo;
-    color: nth($colores, 3);
-    display: flex;
-    margin-top: 30px;
-    color: nth($colores, 3);
-    justify-content: center;
-    
-  }
+  @extend %titulo;
+  color: nth($colores, 3);
+  display: flex;
+  margin-top: 30px;
+  color: nth($colores, 3);
+  justify-content: center;
+}
 
 .grid-contacto {
   display: flex;
