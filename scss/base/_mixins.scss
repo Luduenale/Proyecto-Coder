@@ -1,0 +1,6 @@
+@mixin varios($mtop, $mleft, $mbot) {
+  margin-top: $mtop;
+  margin-left: $mleft;
+  margin-bottom: $mbot;
+}
+

@@ -2,6 +2,7 @@
 @import "components/footer";
 @import "base/listas";
 @import "base/extends";
+@import "base/mixins";
 
 * {
   margin: 0;
@@ -21,9 +22,7 @@ section {
 
 div {
   h1 {
-    margin-top: 30px;
-    margin-left: 1%;
-    margin-bottom: 30px;
+    @include varios(30px, 1%, 30px);
     color: nth($colores, 3);
     @extend %titulo;
   }
@@ -47,9 +46,7 @@ div {
 }
 
 .QS__Titulo {
-  margin-top: 30px;
-  margin-left: 1%;
-  margin-bottom: 30px;
+  @include varios(30px, 1%, 30px);
   color: nth($colores, 3);
   @extend %titulo;
 }
