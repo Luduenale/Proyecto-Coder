@@ -1,0 +1,19 @@
+footer {
+    background-color: nth($colores, 2);
+    width: 100%;
+    p {
+      color: black;
+      font-family: monospace;
+      text-align: center;
+      position: relative;
+      top: 50px;
+    }
+  }
+  
+  .Footer__SocialIcon {
+    margin-left: 97%;
+    img {
+      height: 30px;
+      width: 35px;
+    }
+  }

@@ -1,3 +1,7 @@
+@import "components/header";
+@import "components/footer";
+@import "base/listas";
+
 * {
   margin: 0;
   padding: 0;
@@ -5,34 +9,6 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  background-color: #191919;
-  opacity: 95%;
-  width: 100%;
-  height: 85px;
-  img {
-    position: absolute;
-    left: 10px;
-    height: 80px;
-  }
-  nav {
-    position: fixed;
-    right: 10px;
-    top: 60px;
-    li {
-      display: inline;
-      margin-left: 20px;
-      a {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        text-decoration: none;
-        list-style: none;
-        color: #f3eded;
-      }
-    }
-  }
-}
 section {
   margin-top: 10px;
   display: flex;
@@ -63,25 +39,6 @@ div {
   display: flex;
   justify-content: space-evenly;
 }
-footer {
-  background-color: #525252;
-  width: 100%;
-  p {
-    color: black;
-    font-family: monospace;
-    text-align: center;
-    position: relative;
-    top: 50px;
-  }
-}
-
-.Footer__SocialIcon {
-  margin-left: 97%;
-  img {
-    height: 30px;
-    width: 35px;
-  }
-}
 
 /* CSS en Page Quienes-Somos */
 
@@ -95,7 +52,7 @@ footer {
   margin-top: 30px;
   margin-left: 1%;
   margin-bottom: 30px;
-  color: cadetblue;
+  color: nth($colores, 3);
   font-style: italic;
 }
 
@@ -126,7 +83,7 @@ footer {
   margin-top: 30px;
   margin-left: 1%;
   margin-bottom: 30px;
-  color: cadetblue;
+  color: nth($colores, 3);
   font-style: italic;
 }
 
@@ -148,7 +105,7 @@ footer {
 .grid-contacto {
   display: flex;
   justify-content: center;
-  background-color: #e1e7e6;
+  background-color: nth($colores, 4);
 }
 .grid-contacto {
   display: grid;
@@ -182,14 +139,14 @@ footer {
 .mapa {
   display: flex;
   justify-content: center;
-  background-color: #e1e7e6;
+  background-color: nth($colores, 4);
   padding-top: 2%;
 }
 
 .content-sec {
   display: flex;
   justify-content: space-evenly;
-  background-color: #e1e7e6;
+  background-color: nth($colores, 4);
 }
 
 /* aplicando CSS en formulario */
@@ -198,46 +155,46 @@ footer {
   font-size: 39px;
   text-align: letf;
   padding-bottom: 20px;
-  color: #1d1c1d;
+  color: nth($colores, 5);
 }
 .form-parrafo {
   font-size: 16px;
   padding-bottom: 30px;
-  color: #0e0e0e;
+  color: nth($colores, 6);
 }
 .form-text {
   font-size: 20px;
-  color: #0e0e0e;
+  color: nth($colores, 6);
 }
 .content_form {
   height: auto;
   padding-top: 30px;
   padding-bottom: 20px;
-  background-color: #e1e7e6;
+  background-color: nth($colores, 4);
   padding-left: 30px;
 }
 /* CSS en texto de relleno */
 input {
-  background-color: #ffffff;
+  background-color: nth($colores, 7);
   width: 408px;
   height: 40px;
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-  border-color: #222122;
+  border-color: nth($colores, 8);
   margin-top: 10px;
   padding-left: 10px;
   margin-bottom: 20px;
 }
 /* CSS en mensaje */
 .texto-mensaje {
-  background-color: #ffffff;
+  background-color: nth($colores, 7);
   width: 405px;
   height: 150px;
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-  border-color: #222122;
+  border-color: nth($colores, 8);
   margin-top: 10px;
   padding-left: 10px;
   margin-bottom: 20px;
@@ -256,8 +213,8 @@ input {
   margin-bottom: 20px;
   margin-top: 10px;
   text-transform: uppercase;
-  background-color: #272727;
-  border-color: #222122;
+  background-color: nth($colores, 9);
+  border-color: nth($colores, 8);
   border-style: solid;
   border-radius: 10px;
   width: 420px;
@@ -265,7 +222,7 @@ input {
 }
 
 .boton-enviar p {
-  color: #fff;
+  color: nth($colores, 4);
 }
 
 /* CSS en page servicios GRID */
